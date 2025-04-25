@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WarungKu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Warung Jajaners</h1>
+    <nav>
+      <img src="images/logo.jpg"/>
+        
+      <input type="text" id="search-input" placeholder="Cari produk..." onkeyup="cariProduk()" />
+      <a href="wishlist.html">Wishlist</a>
+      <a href="login.html">Login</a>
+      <a href="promo.html">Promo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="produk-list" id="produk-container">
+      <!-- Produk ditambahkan via JavaScript -->
+    </section>
+
+    <section id="keranjang">
+      <h2>Keranjang</h2>
+      <ul id="daftar-keranjang"></ul>
+      <p>Total: <span id="total-harga">Rp 0</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section id="form-checkout" style="display: none;">
+      <h2>Formulir Checkout</h2>
+      <form id="checkout-form">
+        <input type="text" id="nama" placeholder="Nama Anda" required />
+        <input type="text" id="alamat" placeholder="Alamat Pengiriman" required />
+        <input type="tel" id="telepon" placeholder="Nomor HP" required />
+        <button type="submit">Kirim Pesanan</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
